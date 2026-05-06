@@ -146,125 +146,7 @@ color: #ffffff;
     z-index: 1000;
 }
 
-/* Hamburger */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 4px;
-    margin-right: 1rem;
-    background: transparent;
-    border: none;
-    z-index: 200;
-}
 
-.hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #ffffff;
-    border-radius: 3px;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Hamburger → X animation */
-.hamburger.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-
-/* Overlay */
-.mobile-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 150;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-.mobile-overlay.active {
-    display: block;
-    opacity: 1;
-}
-
-/* Slide-in nav */
-.mobile-nav {
-    position: fixed;
-    top: 0;
-    right: -280px; /* hidden off screen */
-    width: 280px;
-    height: 100vh;
-    background-color: rgb(6, 183, 6);
-    z-index: 200;
-    padding: 2rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    transition: right 0.35s ease-in-out;
-}
-.mobile-nav.active {
-    right: 0; /* slides in */
-}
-
-.mobile-nav-close {
-    align-self: flex-end;
-    font-size: 2rem;
-    color: #ffffff;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    line-height: 1;
-}
-
-.mobile-nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-.mobile-nav ul li a {
-    color: #d41111;
-    font-size: 1.3rem;
-    font-weight: 600;
-    display: block;
-    padding: 0.6rem 0;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    transition: padding-left 0.2s ease;
-}
-.mobile-nav ul li a:hover {
-    padding-left: 0.5rem;
-}
-
-.mobile-nav-btn {
-    width: 100%;
-    padding: 0.8rem;
-    border-radius: 18px;
-    outline: 2px solid white;
-    color: #ffffff;
-    font-size: 1.1rem;
-    font-weight: 600;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.mobile-nav-btn:hover {
-    background-color: #ffffff;
-    color: rgb(6, 183, 6);
-    outline: none;
-}
-
-/* Show hamburger only on mobile */
-@media screen and (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-}
 
 /* Main section styling */
 
@@ -651,6 +533,7 @@ footer.footer{
     min-height: 300px;
     background-color: rgb(6, 183, 6);
     color: #fff;
+    padding-top: 6rem;
 }
 footer a {
     color: #f1f1f1;
@@ -769,7 +652,7 @@ footer .footer-section{
     }
     .hero-section .hero-content h2{
         font-size: 2.5rem;
-        margin-top: 4rem;
+        margin-top: 6rem;
         font-weight: 600;
         padding: .7rem;
         line-height: 1.5;
@@ -781,6 +664,10 @@ footer .footer-section{
             text-transform: capitalize;
             font-size: 1.8rem;
             padding:1rem;
+        }
+        button{
+            margin-top: 1rem;
+        
         }
     }
     /* About section */
@@ -845,13 +732,11 @@ footer .footer-section{
         width: 100%;
         font-weight: 700;
         margin-bottom: 2.1rem;
-        color: red;
      }
 
       .feature-section .feature-container .feature-head p{
         font-size: 1.3rem;
         /* margin: 0 0; */
-        border: 1px solid;
         width: 100%;
         text-align: center;
     
@@ -955,8 +840,14 @@ footer .footer-section{
 .contact-container .contact-form{
     width: 100%;
     position: relative;
-    background-color: red;
-    display: block; 
+    /* background-color: red; */
+    /* display: block;  */
+
+    input{
+        
+        height: 60%;
+        margin-left: 5px;
+    }
 }
 
 
@@ -965,14 +856,23 @@ footer .footer-section{
         width: 100%;
         height: 600px;
         color: brown;
+        padding-top: 1rem;
         /* background-color: red !important; */
     }
 
    footer .footer-section{
-        display: block;
+        /* display: block; */
         width: 100%;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start  ;
+        gap: 2rem;
         padding: 12px;
         margin: 0;
 
+    }
+    .footer-main{
+        width: 100%;
+        
     }
 }
